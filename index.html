@@ -231,6 +231,31 @@
   </body>
 </html>
   
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.EventHighlights a').attr({'href': '/deposit'});
+      $('.hdr-reg-logo').click(function(){
+        window.open("https://sultansbo.com", "_self")
+      });
+
+      $('a').each(function(item){
+        if(typeof $(this).attr('href') !== 'undefined' && $(this).attr('href').indexOf('https://sultansbo.com') === -1)
+          $(this).attr('rel', 'nofollow');
+      });
+
+      function changeSlide() {
+        return false; // to prevent : $(...).slick is not a function
+      }
+
+      //override div on navbar-top-2.php as forgot, livechat, help button to own-lc
+      $('.product-list > .header-icons > .chatonclick').each(function(){
+        $(this).click(function(){
+          window.open("", "_blank")
+        })
+      })
+    });
+  </script>  
+  
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
